@@ -1,0 +1,19 @@
+body {
+  background-color: #FFEFDF;
+}
+
+.center {
+  text-align: center;
+}
+
+.find-cell {
+  border: 3px red solid;
+}
+
+.right {
+  text-align: right;
+}
+
+.left {
+  text-align: left;
+}
