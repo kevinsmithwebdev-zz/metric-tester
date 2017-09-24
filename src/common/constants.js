@@ -1,5 +1,7 @@
 import { getRandom } from 'common/common'
 
+// .env file contains "NODE_PATH=src/" to allow absolute paths to this folder
+
 const CONVERSIONS = {
   LB_PER_KG: 2.20462,
   OZ_PER_G: 0.035274,
@@ -41,7 +43,7 @@ export const UNITS =
         },
         {
           imperial: { units: "fluid ounces", abbreviation: "fl oz", rangeMin: 1, rangeMax: 30, convert: function(imperial) { return imperial/CONVERSIONS.FLOZ_PER_CC; } },
-          metric: { units: "cubit centimeters", abbreviation: "cc", rangeMin: (1/CONVERSIONS.FLOZ_PER_CC), rangeMax: (30/CONVERSIONS.FLOZ_PER_CC), convert: function(metric) { return metric*CONVERSIONS.FLOZ_PER_CC } }
+          metric: { units: "cubic centimeters", abbreviation: "cc", rangeMin: (1/CONVERSIONS.FLOZ_PER_CC), rangeMax: (30/CONVERSIONS.FLOZ_PER_CC), convert: function(metric) { return metric*CONVERSIONS.FLOZ_PER_CC } }
         },
         {
           imperial: { units: "fahrenheit", abbreviation: "°F", rangeMin: 50, rangeMax: 130, convert: function(imperial) { return (imperial-CONVERSIONS.F_PER_C_OFFSET)*CONVERSIONS.F_PER_C_FACTOR; } },
@@ -63,7 +65,3 @@ export const MESSAGES = {
     }
   }
 }
-
-// button statuse
-
-export const BTN = { DEFAULT: "primary", CORRECT: "success", WRONG: "danger" }

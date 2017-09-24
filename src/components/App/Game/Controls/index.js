@@ -11,8 +11,6 @@ class Controls extends Component {
     var scoreString = this.props.score.correct + "/" + this.props.score.attempted + " correct";
     if (this.props.score.attempted>0)
       scoreString+= " " + Math.round(100*this.props.score.correct/this.props.score.attempted) + "%";
-    // console.log("Controls.render");
-    // console.log(BTN);
     return (
         <div className="container">
           <div>

@@ -4,7 +4,7 @@ import Question from './Question';
 import Controls from './Controls';
 import NewQuiz from './NewQuiz';
 
-import { CFG, MESSAGES, UNITS, BTN } from 'common/constants'
+import { CFG, MESSAGES, UNITS } from 'common/constants'
 import { getRandom } from 'common/common'
 
 
@@ -22,7 +22,7 @@ class Game extends Component {
       guessed: false,
       answer: { answerNum: 0, questionNum: 0, location: 0 },
       btnStatus: {
-        code: Array(CFG.MAX_NUM_ANSWERS).fill(BTN.DEFAULT),
+        code: Array(CFG.MAX_NUM_ANSWERS).fill("primary"),
         isEnabled: Array(CFG.MAX_NUM_ANSWERS).fill("true")
       },
       message: MESSAGES.random("start"),
@@ -37,8 +37,6 @@ class Game extends Component {
 /*********************************************************************/
 
   handleGuess(guessIndex) {
-    console.log("Game.handleGuess");
-    // console.log(UNITS[this.state.currentMeasurement]);
 
     var newMessage;
     var newScore = this.state.score;
@@ -53,8 +51,8 @@ class Game extends Component {
             UNITS[this.state.currentMeasurement][(this.state.isImpToMet)?"metric":"imperial"].abbreviation;
     }
     newScore.attempted++;
-    newBtnStatus.code[guessIndex]=BTN.WRONG;
-    newBtnStatus.code[this.state.answer.location]=BTN.CORRECT;
+    newBtnStatus.code[guessIndex]="danger";
+    newBtnStatus.code[this.state.answer.location]="success";
     newBtnStatus.isEnabled[this.state.answer.location]=true;
     this.setState( { message: newMessage, btnStatus: newBtnStatus, score: newScore, guessed: true } );
 
@@ -63,8 +61,6 @@ class Game extends Component {
 /*********************************************************************/
 
   generateQ() {
-
-    // console.log("Game.generateQ");
 
     var curMin = UNITS[this.state.currentMeasurement][(this.state.isImpToMet)?"imperial":"metric"].rangeMin;
     var curMax = UNITS[this.state.currentMeasurement][(this.state.isImpToMet)?"imperial":"metric"].rangeMax;
@@ -86,7 +82,7 @@ class Game extends Component {
     answerNum = this.prettyNum(answerNum);
 
     var btnStatus = {
-      code: Array(CFG.MAX_NUM_ANSWERS).fill(BTN.DEFAULT),
+      code: Array(CFG.MAX_NUM_ANSWERS).fill("primary"),
       isEnabled: Array(CFG.MAX_NUM_ANSWERS).fill("true")
     }
 
@@ -132,8 +128,6 @@ class Game extends Component {
 /*********************************************************************/
 
   render() {
-    // console.log("Game");
-    // console.log(this.state);
 
     return (
       <div>
@@ -167,6 +161,6 @@ class Game extends Component {
       </div>
     );
   }
-} // Game
+} 
 
 export default Game;

@@ -8,8 +8,6 @@ import { UNITS } from 'common/constants'
 class Question extends Component {
 
     render() {
-      // console.log("Question.render");
-      // console.log(this.props);
 
       return (
         <div>

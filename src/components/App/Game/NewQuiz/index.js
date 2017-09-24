@@ -47,7 +47,7 @@ class NewQuiz extends Component {
                 <ToggleButton key="0" value="0" onChange={this.handleDifficultyChange.bind(this)}>Easy</ToggleButton>
                 <ToggleButton key="1" value="1" onChange={this.handleDifficultyChange.bind(this)}>Medium</ToggleButton>
                 <ToggleButton key="2" value="2" onChange={this.handleDifficultyChange.bind(this)}>Hard</ToggleButton>
-                <ToggleButton key="3" value="3" onChange={this.handleDifficultyChange.bind(this)}>Lethal</ToggleButton>
+                <ToggleButton key="3" value="3" onChange={this.handleDifficultyChange.bind(this)}>Hardest</ToggleButton>
               </ToggleButtonGroup>
 
             </div>

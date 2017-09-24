@@ -11,7 +11,7 @@ class Choices extends Component {
       <Button bsSize="large" bsStyle={this.props.btnStatus.code[i]} key={i}
              onClick={this.onGuess.bind(this, i)} disabled={!this.props.btnStatus.isEnabled[i]} >
           {choice}&nbsp;{UNITS[this.props.currentMeasurement][(this.props.isImpToMet)?"metric":"imperial"].abbreviation}
-      </Button> 
+      </Button>
     )
   }
 

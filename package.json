@@ -1,6 +1,9 @@
 {
-  "name": "metric",
-  "version": "0.1.0",
+  "name": "metric-tester",
+  "description": "A metric/imperial conversion tester game built with create-react-app",
+  "author": "Kevin Smith",
+  "license": "Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International Public License",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "react": "^15.6.1",
@@ -14,5 +17,6 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
-  "devDependencies": {}
+  "devDependencies": {},
+  "homepage": "./"
 }
