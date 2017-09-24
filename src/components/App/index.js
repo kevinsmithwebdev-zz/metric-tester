@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import './App.css';
-import Header from './components/Header';
-import Game from './components/Game';
-import Footer from './components/Footer';
+import './index.css';
+
+import Header from './Header';
+import Game from './Game';
+import Footer from './Footer';
 
 class App extends Component {
   render() {

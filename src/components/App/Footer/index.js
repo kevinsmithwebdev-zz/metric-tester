@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 
+import './styles.css'
+
 class Footer extends Component {
 
   render() {
     return (
-      <p>
-        footer
-      </p>
+      <h6 className="footer">
+        &copy;2017 Kevin Smith
+      </h6>
     );
   }
 }
